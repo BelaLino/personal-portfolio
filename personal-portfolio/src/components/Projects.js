@@ -1,8 +1,12 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import { AssetCard } from "./AssetCard";
 import projImg1 from "../assets/img/project-elementales.png";
 import projImg2 from "../assets/img/project-trueCity.png";
 import projImg3 from "../assets/img/Animunch.png";
+import assetImg1 from "../assets/img/project-elementales.png";
+import assetImg2 from "../assets/img/animunch_backgrounds.jpg";
+import assetImg3 from "../assets/img/monstergirls.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import pigProp from "../assets/img/Porco_Assado.png";
 import 'animate.css';
@@ -27,6 +31,24 @@ export const Projects = () => {
       title: "Animunch",
       description: "Em Desenvolvimento",
       imgUrl: projImg3,
+    },
+  ];
+
+  const assets = [
+    {
+      title: "Elementales",
+      description: "Google Play promo art for Elementales",
+      imgUrl: assetImg1,
+    },
+    {
+      title: "Background Levels",
+      description: "Different background levels for Animunch",
+      imgUrl: assetImg2,
+    },
+    {
+      title: "Monster Girls",
+      description: "Character concepts for the MonsterGirls mobile game",
+      imgUrl: assetImg3,
     },
   ];
 
@@ -68,8 +90,20 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                      <p>Para clientes que nos ajudam a fazer a magia acontecer.</p>
+                      <Row>
+                          {
+                            assets.map((project, index) => {
+                              return (
+                                <AssetCard
+                                  key={index}
+                                  {...project}
+                                />
+                              )
+                            })
+                          }
+                        </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <p>Não temos nenhum projeto autoral ainda, mas fique de olho! Estamos cozinhando nos bastidores. 👀</p>
