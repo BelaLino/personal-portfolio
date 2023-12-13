@@ -506,6 +506,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+.asset-imgbx {
+  position: relative;
+  margin-bottom: 30px;
+}
+.asset-txtx {
+  position: relative;
+  text-align: center;
+  font-style: italic;
+  width: 100%;
+}
+.asset-txtx h4 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-top: 20px;
+  line-height: 1.2em;
+}
+
 /************ Contact Css ************/
 .contact {
   background: rgb(182, 87, 87);
