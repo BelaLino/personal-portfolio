@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-elementales.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg2 from "../assets/img/project-trueCity.png";
+import projImg3 from "../assets/img/Animunch.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import pigProp from "../assets/img/Porco_Assado.png";
 import 'animate.css';
@@ -15,30 +15,17 @@ export const Projects = () => {
       title: "Elementales",
       description: "Unity 2D RPG Game",
       imgUrl: projImg1,
+      link: "https://play.google.com/store/apps/details?id=com.P3TGaming.Elementales&hl=en",
     },
     {
       title: "True City",
       description: "Unity Zombie Survival Game",
       imgUrl: projImg2,
+      link: "https://truecitynft.com/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Animunch",
+      description: "Em Desenvolvimento",
       imgUrl: projImg3,
     },
   ];
@@ -51,7 +38,7 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
+                <h2>Projetos</h2>
                 <p></p> {/*Here we can have text display below the projects tab*/}
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
